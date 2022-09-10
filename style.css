@@ -1,0 +1,52 @@
+/*#enregistrerE{
+   border: 1px solid black;
+   width: 75%;
+}*/
+#bloc1-2{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*#bloc1{
+border: 1px solid blue;
+position: relative;
+
+}
+#bloc2{
+    border: 1px solid yellow;
+    position: relative;
+}
+#bloc3{
+    border: 1px solid gray;
+    position: relative;
+}
+#bloc4 {
+    border: 1px solid gray;
+    position: relative;
+}*/
+
+
+label{
+    display: block;
+}
+#bloc1 div{
+    margin: 5px;
+    width: 50%;
+}
+#bloc2 div {
+    margin: 5px;
+    width: 50%;
+}
+#bloc3 div {
+    margin: 5px;
+    width: 50%;
+}
+#bloc4 div {
+    margin: 5px;
+    width: 50%;
+}
+table,td,tr{
+border: 1px solid black;
+border-collapse: collapse;
+}
