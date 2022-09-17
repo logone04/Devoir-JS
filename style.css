@@ -1,14 +1,14 @@
-/*#enregistrerE{
+#enregistrerE{
    border: 1px solid black;
    width: 75%;
-}*/
+}
 #bloc1-2{
     display: flex;
     justify-content: space-between;
 
 }
 
-/*#bloc1{
+#bloc1{
 border: 1px solid blue;
 position: relative;
 
@@ -24,7 +24,7 @@ position: relative;
 #bloc4 {
     border: 1px solid gray;
     position: relative;
-}*/
+}
 
 
 label{

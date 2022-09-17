@@ -132,9 +132,8 @@ ajouterNotesBtn.addEventListener("click", function ajouterNotes(e) {
 
     afficherNotes(listeNotes);
 
-
-
 });
+var  listeEtudiant=new Array();
 
 ajouterEtudiantBtn = document.getElementById('ajouterEtudiant');
 ajouterEtudiantBtn.addEventListener('click', function ajouterEtudiant(e) {
@@ -150,9 +149,46 @@ ajouterEtudiantBtn.addEventListener('click', function ajouterEtudiant(e) {
     let taille = document.getElementById('taille');
     let poids = document.getElementById('poids');
     let sexe;
-    if document.getElementById('homme').checked{
-        sexe
+    if (document.getElementById('homme').checked) {
+        sexe = document.getElementById('homme').value;
     }
-    let etudiant=new Etudiant(nom,prenom,dateNaissance,lieuNaissance,sexe,taille,poids,parcours,listeNotes)
+    else {
+        sexe = document.getElementById('femme').value;
+    }
+    let etudiant = new Etudiant(nom, prenom, dateNaissance, lieuNaissance, sexe, taille, poids, parcours, listeNotes);
+    listeEtudiant.push(etudiant);
+    afficherEtudiant(listeEtudiant);
 })
+
+function supprimerEtudiant(index){
+    listeEtudiant.splice(index, 1);
+    afficherEtudiant(listeEtudiant);
+};
+function afficherEtudiant(listeEtudiant){
+    let TEtudiant=document.getElementById('tableau');
+    let ligne=document.createElement('tr');
+    let cellule1=document.createElement('td');
+    cellule1.innerHTML="Nom";
+    let cellule2 = document.createElement('td');
+    cellule2.innerHTML="Prenom";
+    let cellule3 = document.createElement('td');
+    cellule3.innerHTML="dateNaissance";
+    listeEtudiant.forEach((etudiant,index)=>{
+        let tr = document.createElement('tr');
+        let cellule1=document.createElement('td');
+        cellule1.innerText=listeEtudiant[index].nomE;
+        let cellule2 = document.createElement('td');
+        cellule2.innerText = listeEtudiant[index].date;
+        let cellule3 = document.createElement('td');
+        cellule3.innerText = listeEtudiant[index].lieuNaissance;
+        tr.appendChild(cellule1);
+        tr.appendChild(cellule2);
+        tr.appendChild(cellule3);
+        TEtudiant.appendChild(tr);
+
+
+    })
+}
+
+
 

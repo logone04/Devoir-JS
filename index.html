@@ -34,7 +34,7 @@
 
     <div id="bloc3">
         <label for="parcours"> Parcours</label>
-        <select name="parcours" id="">
+        <select name="parcours" id="parcours">
             <option value="">sélectionner votre parcours</option>
             <option value="">Art Numérique</option>
             <option value="">Data science</option>
@@ -56,6 +56,15 @@
             <label for="dateofborn"> Date de Naissance</label>
             <input type="date" id="dateNaissance">
         </div>
+    </div>
+    <div>
+        <table id="tableau">
+            <tr>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Date de Naissance</td>
+            </tr>
+        </table>
     </div>
     <div id="bloc4">
         <h3>Notes</h3>
@@ -104,6 +113,24 @@
     </div>
     <script src="javascript/index.js"></script>
     <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modifier l'enregistrement</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalContent">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveModif" class="input-group-text" data-bs-dismiss="modal"
+                        aria-label="Close">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
